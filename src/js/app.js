@@ -28,8 +28,27 @@ const resultElem = document.getElementById('result'),
 axios.get(`${process.env.API_URL}status/hatkid`)
   .catch(console.log)
   .then(({ data: { status, title } }) => {
-    let type = types.None
+    const urlParams = new URLSearchParams(window.location.search)
 
+    if (urlParams.has('stream'))
+      status = 'live'
+
+    switch (urlParams.get('stream')) {
+      case '1':
+        title = '[Ascension Academy]'
+        break
+      case '2':
+        title = '[Callous Row]'
+        break
+      case '3':
+        title = '[Mainverse]'
+        break
+      default:
+        title = ''
+        break
+    }
+
+    let type = types.None
     if (status === 'live') {
       if (title.includes('[Ascension Academy]'))
         type = types.AscensionAcademy
