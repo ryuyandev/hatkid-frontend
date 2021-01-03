@@ -67,10 +67,8 @@ axios.get(`${process.env.API_URL}status/hatkid`)
     image.src = images.hatkid[type]
     resultElem.appendChild(image)
 
+    document.getElementById('loader').classList.add('loaded')
     setTimeout(() => {
-      document.getElementById('loader').classList.add('loaded')
-      setTimeout(() => {
-        document.querySelector('main').classList.add('loaded')
-      }, 340)
-    }, 1000)
+      document.querySelector('main').classList.add('loaded')
+    }, 340)
   })
