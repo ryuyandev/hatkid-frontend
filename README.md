@@ -3,7 +3,7 @@ This repository holds the front end for Hatkid's website. It shows whether or no
 
 Due to the simplicity of this project, it does not utilize a front end framework, but it makes use of Parcel.js for bundling. Presently it is hosted on [surge](https://surge.sh), a CDN for static sites.
 
-The project runs in tandem with a simple Express.js API, located [here](https://github.com/ryuyan-dev/twitch-api).
+The project runs in tandem with a simple Express.js API, located [here](https://github.com/ryuyandev/twitch-api).
 
 ## Usage
 
