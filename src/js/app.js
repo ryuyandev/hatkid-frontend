@@ -30,22 +30,23 @@ axios.get(`${process.env.API_URL}status/hatkid`)
   .then(({ data: { status, title } }) => {
     const urlParams = new URLSearchParams(window.location.search)
 
-    if (urlParams.has('stream'))
+    if (urlParams.has('stream')) {
       status = 'live'
 
-    switch (urlParams.get('stream')) {
-      case '1':
-        title = '[Ascension Academy]'
-        break
-      case '2':
-        title = '[Callous Row]'
-        break
-      case '3':
-        title = '[Mainverse]'
-        break
-      default:
-        title = ''
-        break
+      switch (urlParams.get('stream')) {
+        case '1':
+          title = '[Ascension Academy]'
+          break
+        case '2':
+          title = '[Callous Row]'
+          break
+        case '3':
+          title = '[Mainverse]'
+          break
+        default:
+          title = ''
+          break
+      }
     }
 
     let type = types.None
