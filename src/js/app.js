@@ -51,8 +51,7 @@ axios.get(`${process.env.API_URL}status/hatkid`)
     setTimeout(() => {
       document.getElementById('loader').classList.add('loaded')
       setTimeout(() => {
-        resultElem.classList.add('loaded')
+        document.querySelector('main').classList.add('loaded')
       }, 340)
     }, 1000)
-
   })
