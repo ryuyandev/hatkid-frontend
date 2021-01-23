@@ -27,6 +27,7 @@ body {
     #result {
       display: flex;
       flex-direction: row-reverse;
+      align-items: flex-start;
       text-decoration: none;
       color: #000;
 
